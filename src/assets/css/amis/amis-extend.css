@@ -1,0 +1,210 @@
+:root {
+  --Page-main-bg:#f0f0f0;
+  --Collapse-border: 0.0625rem solid #d4d6d9;
+  --Tabs--simple-split-color: #d4d6d9;
+  --sizes-base-17: var(--sizes-base-16);
+  --Form-item-gap: var(--gap-sm);
+  --Form--horizontal-label-widthBase: var(--sizes-base-51);
+  --DatePicker-minWidth: auto;
+  --DatePicker-fontSize: var(--fontSizeMd);
+  --Collapse-header-padding: 0.4rem 0.6rem;
+  --borderColor: #d4d6d9;
+  --Toast--warning-bgColor: var(--colors-neutral-fill-11);/*修复一个bug*/
+  --button-default-default-bg-color: var(--colors-neutral-fill-11);
+  --button-default-hover-bg-color: var(--colors-neutral-fill-11);
+  --button-secondary-default-top-border-color: var(--colors-neutral-line-5);
+  --button-secondary-default-left-border-color: var(--colors-neutral-line-5);
+  --button-secondary-default-right-border-color: var(--colors-neutral-line-5);
+  --button-secondary-default-bottom-border-color: var(--colors-neutral-line-5);
+  --button-secondary-default-bg-color: var(--colors-neutral-fill-5);
+  --button-secondary-hover-top-border-color: var(--colors-neutral-line-4);
+  --button-secondary-hover-left-border-color: var(--colors-neutral-line-4);
+  --button-secondary-hover-right-border-color: var(--colors-neutral-line-4);
+  --button-secondary-hover-bottom-border-color: var(--colors-neutral-line-4);
+  --button-secondary-hover-bg-color: var(--colors-neutral-fill-4);
+  --button-secondary-active-top-border-color: var(--colors-neutral-line-3);
+  --button-secondary-active-left-border-color: var(--colors-neutral-line-3);
+  --button-secondary-active-right-border-color: var(--colors-neutral-line-3);
+  --button-secondary-active-bottom-border-color: var(--colors-neutral-line-3);
+  --button-secondary-active-bg-color: var(--colors-neutral-fill-3);
+}
+html, body, #root {
+  height: 100%;
+}
+.top-loading .cxd-Spinner-overlay{
+  z-index: 1998;
+}
+.top-loading .cxd-Spinner--overlay{
+  z-index: 1999;
+}
+.import-btn{
+  margin: 0;
+  margin-top: var(--gap-xs);
+  margin-left: var(--gap-xs);
+  max-height: var(--button-size-default-height);
+  overflow: hidden;
+}
+.import-btn .cxd-FileControl-selectBtn{
+  margin: 0;
+}
+.import-btn .cxd-FileControl-selectBtn > span{
+  font-size: var(--button-size-default-fontSize)
+}
+.import-btn .cxd-FileControl-list {
+  display: none;
+}
+.import-btn .cxd-Button--default{
+  color: var(--button-dark-default-font-color);
+  background: var(--button-dark-default-bg-color);
+  border-color: var(--button-dark-default-top-border-color) var(--button-dark-default-right-border-color) var(--button-dark-default-bottom-border-color) var(--button-dark-default-left-border-color);
+}
+.import-btn .cxd-Button--default:not(:disabled):not(.is-disabled):hover{
+  color: var(--button-dark-hover-font-color);
+  background: var(--button-dark-hover-bg-color);
+  border-color: var(--button-dark-hover-top-border-color) var(--button-dark-hover-right-border-color) var(--button-dark-hover-bottom-border-color) var(--button-dark-hover-left-border-color);
+}
+.import-btn .cxd-Button--default.is-disabled{
+  color: var(--button-default-disabled-font-color);
+  background: var(--button-default-disabled-bg-color);
+  border-color: var(--button-default-disabled-top-border-color) var(--button-default-disabled-right-border-color) var(--button-default-disabled-bottom-border-color) var(--button-default-disabled-left-border-color);
+  border-width: var(--button-default-disabled-top-border-width) var(--button-default-disabled-right-border-width) var(--button-default-disabled-bottom-border-width) var(--button-default-disabled-left-border-width);
+  border-style: var(--button-default-disabled-top-border-style) var(--button-default-disabled-right-border-style) var(--button-default-disabled-bottom-border-style) var(--button-default-disabled-left-border-style);
+  box-shadow: var(--button-default-disabled-shadow);
+}
+.import-btn .cxd-Button--default.light{
+  color: var(--button-default-default-font-color);
+  background: var(--button-default-default-bg-color);
+  border-color: var(--button-default-default-top-border-color) var(--button-default-default-right-border-color) var(--button-default-default-bottom-border-color) var(--button-default-default-left-border-color);
+}
+.import-btn .cxd-Button--default.light:not(:disabled):not(.is-disabled):hover{
+  color: var(--button-default-hover-font-color);
+  background: var(--button-default-hover-bg-color);
+  border-color: var(--button-default-hover-top-border-color) var(--button-default-hover-right-border-color) var(--button-default-hover-bottom-border-color) var(--button-default-hover-left-border-color);
+}
+.import-btn .cxd-Button--default.light.is-disabled{
+  color: var(--button-default-disabled-font-color);
+  background: var(--button-default-disabled-bg-color);
+  border-color: var(--button-default-disabled-top-border-color) var(--button-default-disabled-right-border-color) var(--button-default-disabled-bottom-border-color) var(--button-default-disabled-left-border-color);
+  border-width: var(--button-default-disabled-top-border-width) var(--button-default-disabled-right-border-width) var(--button-default-disabled-bottom-border-width) var(--button-default-disabled-left-border-width);
+  border-style: var(--button-default-disabled-top-border-style) var(--button-default-disabled-right-border-style) var(--button-default-disabled-bottom-border-style) var(--button-default-disabled-left-border-style);
+  box-shadow: var(--button-default-disabled-shadow);
+}
+.import-btn .icon.icon-upload {
+  display: none;
+}
+.import-btn button {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+}
+.import-btn button::before{
+  content: "\f019";
+}
+.import-btn button span {
+  font-weight: normal;
+  font-family: var(--fontFamilyBase);
+  margin-left: var(--button-size-default-icon-margin);
+}
+.cxd-Page .overflow-auto{
+  height:100%;
+  overflow:auto;
+}
+.cxd-Page .overflow-y-auto{
+  height:100%;
+  overflow-y:auto;
+  overflow-x: hidden;
+}
+.cxd-Page .cxd-Page-main .cxd-Page-header {
+  padding: 0.45rem var(--gap-base);
+}
+.cxd-Page .cxd-Page-main > .cxd-Page-toolbar {
+  padding: var(--gap-xs) var(--gap-base);
+  border-bottom: var(--borderWidth) solid var(--borderColor);
+}
+.cxd-Form .cxd-Collapse {
+  border: var(--Collapse-border);
+}
+.cxd-Form .cxd-Collapse-header {
+  background-color: var(--Collapse-header-bg);
+  display: block;
+}
+.cxd-Form .cxd-Collapse-content {
+  padding: var(--Collapse-content-padding);
+}
+.cxd-Form-value .is-disabled,.cxd-Form-value .is-disabled input {
+  color: var(--Form-input-onDisabled-color) !important;
+}
+.cxd-Collapse--disabled .cxd-Collapse-header {
+  cursor: default;
+  color: var(--text--loud-color);
+}
+.cxd-Collapse--disabled .cxd-Collapse-header:hover {
+  --Collapse-header-bg-disabled-color: var(--Collapse-header-bg);
+}
+.cxd-Collapse-content {
+  border-top: var(--Collapse-border);
+  background: #f5f5f5;
+}
+.cxd-Select {
+  background: var(--Form-select-bg) !important;
+  justify-content: space-between;
+}
+.cxd-Select.is-disabled {
+  background: var(--Form-input-onDisabled-bg) !important;
+}
+.cxd-Select-valueWrap {
+  max-width: calc(100% - 3rem);
+}
+.cxd-Select.unclearable .cxd-Select-valueWrap {
+  max-width: calc(100% - 1.7rem);
+}
+.cxd-Select-placeholder {
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+}
+.cxd-DatePicker.is-disabled {
+  background: var(--Form-input-onDisabled-bg);
+  border-color: var(--Form-input-onDisabled-borderColor);
+  transition: all var(--animation-duration);
+}
+.cxd-DateControl.is-error > .cxd-DatePicker {
+  border-color: var(--Form-input-onError-borderColor);
+  background: var(--Form-input-onError-bg);
+}
+.cxd-NumberControl.is-error > .cxd-Number {
+  border-color: var(--Form-input-onError-borderColor);
+  background: var(--Form-input-onError-bg);
+}
+.cxd-Number.no-steps > .cxd-Number-handler-wrap {
+  display: none !important;
+}
+.cxd-TreeControl {
+  background: #fff;
+  min-height: var(--Form-item-treeControl-min-height, 300px);
+}
+.cxd-Transfer-select,.cxd-Transfer-result {
+  background: #fff;
+}
+.cxd-Drawer.outlet .cxd-Drawer-header {
+  display: none;
+}
+.cxd-Drawer.outlet .cxd-Drawer-body {
+  padding: 0;
+}
+.cxd-Drawer.outlet.hide-close-btn .cxd-Drawer-close {
+  display: none;
+}
+.cxd-Tabs-pane {
+  padding: 0;
+  margin-top: var(--gap-base);
+}
+.cxd-Transfer-search .cxd-InputBox {
+  padding: var(--Form-input-paddingY) var(--Form-input-paddingX);
+}
+.cxd-Transfer-search .cxd-InputBox input {
+  height: calc(var(--Form-input-lineHeight) * var(--Form-input-fontSize))
+}
+.cxd-Button--link {
+  padding: 0;
+  vertical-align: baseline;
+}

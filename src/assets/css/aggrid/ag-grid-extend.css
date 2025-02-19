@@ -1,0 +1,238 @@
+.ag-theme-extend {
+  --ag-font-size: 13px;
+  --ag-secondary-foreground-color: #000;
+  --fontSizeBase: var(--ag-font-size);
+  --Form-input-fontSize: var(--ag-font-size);
+  --Form-input-height: 1.56rem;
+  --Form-input-paddingY: calc((var(--Form-input-height) - var(--Form-input-lineHeight) * var(--Form-input-fontSize) - 0.125rem) / 2);
+  --Form-selectOption-height: var(--Form-input-height);
+  --Button-fontSize: var(--ag-font-size);
+  --button-size-default-height: var(--Form-input-height);
+  --Form-input-onHover-borderColor: var(--Form-input-borderColor);
+  --Form-input-onFocused-borderColor: var(--Form-input-borderColor);
+  --Form-input-paddingX: 0.2rem;
+  --Form-select-paddingX: 0.6rem;
+  --DatePicker-height: var(--Form-input-height);
+  --DatePicker-fontSize: var(--ag-font-size);
+  --DatePicker-paddingY: calc((var(--Form-input-height) - var(--DatePicker-lineHeight) * var(--DatePicker-fontSize)) / 2 - var(--DatePicker-borderWidth));
+  --ColorPicker-height: var(--Form-input-height);
+  --Form-label-paddingTop: calc((var(--Form-input-height) - var(--Form-input-lineHeight) * var(--Form-input-fontSize)) / 2);
+  --Form-select-menu-height: var(--Form-input-height);
+  --Form-selectOption-height: var(--Form-input-height);
+  --InputGroup-height: var(--Form-input-height);
+  --Tree-inputHeight: calc(var(--Form-input-height) * 0.85);
+  --DatePicker-onFocused-borderColor: var(--Form-input-onFocused-borderColor);
+  --DatePicker-onHover-borderColor: var(--Form-input-onFocused-borderColor);
+  --ColorPicker-onFocused-borderColor: var(--Form-input-onFocused-borderColor);
+  --Form-select-onFocused-borderColor: var(--Form-input-onFocused-borderColor);
+  --InputGroup-addOn-onFocused-borderColor: var(--Form-input-onFocused-borderColor);
+}
+
+.ag-theme-extend .ag-main-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: var(--ag-borders) var(--ag-border-color);
+  background-color: var(--ag-background-color);
+}
+
+.ag-theme-extend .ag-main-body {
+  flex: 1 1 auto;
+}
+
+.ag-theme-extend .ag-main-body > div > .ag-root-wrapper {
+  border: none;
+}
+
+.ag-theme-extend .cxd-Select-clear {
+  padding: 0.1rem;
+}
+
+.ag-theme-extend .ag-cell-inline-editing {
+  height: 100%;
+}
+
+.ag-theme-extend .ag-cell-inline-editing.ag-cell-overflow-visible {
+  overflow: visible;
+}
+
+.ag-theme-extend .ag-amis-select-editor {
+  display: flex;
+  padding: 0;
+  padding-left: 10px;
+  min-height: 25px;
+}
+
+.ag-theme-extend .ag-rich-select-value {
+  height: 27px;
+}
+
+.ag-theme-extend .ag-cell.ag-cell-modified {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAWdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjA76PVpAAAAJUlEQVQYV2O46Wf+Hw03oAs2ADEDsiBYAFkQLgATRBG46WfOAACY3y6lVHsEzwAAAABJRU5ErkJggg==');
+  background-repeat: no-repeat;
+}
+
+.ag-theme-extend .ag-center-cols-container .ag-row.ag-row-newadded::after {
+  content: '+';
+  color: #d94e37;
+  line-height: 25px;
+  font-size: 10px;
+  padding-left: 2px;
+  position: absolute;
+}
+
+.ag-theme-extend .ag-cell.ag-cell-data-duplication:not(:has(.ag-cell-value))::before,.ag-theme-extend .ag-cell.ag-cell-data-duplication .ag-cell-value::before {
+  content: "!";
+  position: absolute;
+  z-index: 0;
+  color: #d94e37;
+  line-height: 28px;
+  margin-left: -5px;
+  font-weight: bold;
+}
+
+.ag-theme-extend .ag-cell.ag-cell-empty:not(:has(.ag-cell-value))::before,.ag-theme-extend .ag-cell.ag-cell-empty .ag-cell-value::before {
+  content: "*";
+  position: absolute;
+  z-index: 0;
+  color: #d94e37;
+  line-height: 28px;
+}
+
+.ag-theme-extend .ag-cell.ag-cell-empty .ag-cell-value::before {
+  position: static;
+}
+
+.ag-theme-extend .ag-cell.ag-cell-empty .ag-cell-edit-wrapper {
+  color: #000000;
+}
+
+.ag-theme-extend .ag-cell-wrapper>*:not(.ag-cell-value):not(.ag-group-value) {
+  height: 27px;
+}
+
+.ag-theme-extend .ag-row.ag-row-footer .ag-selection-checkbox {
+  display: none;
+}
+
+.ag-theme-extend .ag-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.ag-theme-extend .ag-checkbox-wrapper input[type=checkbox] {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+  font-family: var(--ag-icon-font-family);
+}
+
+.ag-theme-extend .ag-checkbox-wrapper input[type=checkbox]::before {
+  content: "\f108";
+  color: var(--ag-checkbox-unchecked-color);
+  position: absolute;
+  pointer-events: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ag-theme-extend .ag-checkbox-wrapper input[type=checkbox]:checked::before {
+  content: "\f12e";
+  color: #fff;
+  background-color: var(--ag-checkbox-unchecked-color);
+}
+
+.ag-theme-extend .ag-popup-editor {
+  box-shadow: none;
+}
+
+.cxd-Modal .ag-theme-extend .ag-popup-editor {
+  z-index: 1400;
+}
+
+.ag-theme-extend .cxd-Select.is-mobile {
+  font-size: var(--ag-font-size);
+}
+
+.ag-paging-row-action-panel > .ag-paging-page-size {
+  margin-right: 24px;
+}
+
+.ag-paging-row-action-panel > * > span {
+  vertical-align: middle;
+}
+
+/* 移动端样式调整 */
+@media (max-width: 767px) {
+  @keyframes expand {
+    0%{
+      width: 20px;
+      overflow: hidden;
+    }
+    100%{
+      width: 100%;
+      overflow: unset;
+    }
+  }
+  @keyframes shrink {
+    0%{
+      width: 100%;
+      overflow: hidden;
+    }
+    100%{
+      width: 20px;
+      overflow: hidden;
+    }
+  }
+  .ag-paging-panel {
+    position: relative;
+    padding-left: 20px;
+  }
+  .ag-paging-row-summary-panel {
+    text-align: center;
+  }
+  .ag-paging-page-summary-panel .ag-paging-description {
+    text-align: center;
+  }
+  .ag-paging-row-action-panel {
+    width: 20px;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+  }
+  .ag-paging-row-action-panel.expanded {
+    animation: expand 0.2s 1 forwards;
+  }
+  .ag-paging-row-action-panel.shrinked {
+    animation: shrink 0.2s 1 forwards;
+  }
+  .ag-paging-row-action-panel > * {
+    margin: 0 10px !important;
+  }
+  .ag-paging-row-action-panel > .ag-paging-icon {
+    display: inline !important;
+    height: 50%;
+    line-height: 120%;
+    margin: 0 !important;
+    right: 0;
+    position: absolute;
+    background-color: #fff;
+    padding: 0 2px;
+    border-left: 1px solid #333;
+    color: #444;
+  }
+}
